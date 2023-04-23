@@ -39,7 +39,14 @@
      <Compile Include="Assets\Scripts\BumperController.cs" />
      <Compile Include="Assets\Scripts\SwitchController.cs" />
      <Compile Include="Assets\Scripts\Paddle.cs" />
+     <Compile Include="Assets\Scripts\CameraCOntroller.cs" />
+     <Compile Include="Assets\Scripts\VFXManager.cs" />
      <Compile Include="Assets\Scripts\BallController.cs" />
+     <Compile Include="Assets\Scripts\TriggerZoomOutController.cs" />
+     <Compile Include="Assets\Scripts\TriggerZoomInController.cs" />
+     <Compile Include="Assets\Scripts\FxController.cs" />
+     <Compile Include="Assets\Scripts\SFXAudioController.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\LauncerController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity 2021.3.18f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -665,9 +672,6 @@
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -680,8 +684,11 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
         <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    <Reference Include="Autodesk.Fbx.Editor">
+        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Autodesk.Fbx.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Fbx.Editor">
+        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.Formats.Fbx.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -713,20 +720,32 @@
     <Reference Include="Unity.Rider.Editor">
         <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    <Reference Include="Autodesk.Fbx">
+        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Autodesk.Fbx.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
         <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
         <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Shared.Editor">
+        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Formats.Fbx.Runtime">
+        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.Formats.Fbx.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State">
+        <HintPath>D:\Work\Unity\Agate Academy\3D Physic-based Game Programming Batch 3\HadiansyahAL-GamePinball\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

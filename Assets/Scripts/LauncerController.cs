@@ -22,6 +22,7 @@ public class LauncerController : MonoBehaviour
         if (collision.collider == ball)
         {
             ReadInput(ball);
+           
         }
    }
 
