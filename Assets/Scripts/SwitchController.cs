@@ -12,10 +12,14 @@ public class SwitchController : MonoBehaviour
     public Collider ball;
     public Material onMaterial;
     public Material offMaterial;
-    public AudioManager audioManager;
-    public VFXManager vfxManager;
     private SwitchState state;
     private Renderer renderer;
+    public float score;
+
+
+    public AudioManager audioManager;
+    public VFXManager vfxManager;
+    public ScoreManager scoreManager;
 
     private void Start() {
         renderer = GetComponent<Renderer>();
@@ -31,6 +35,7 @@ public class SwitchController : MonoBehaviour
             audioManager.PlaySFX(ball.transform.position);
              //playvfx
             vfxManager.PlayVFX(ball.transform.position);
+           
         }
     }
 
@@ -52,6 +57,7 @@ public class SwitchController : MonoBehaviour
         }else {
             Set(true);
         }
+        scoreManager.AddScore(score);
     }
 
     private IEnumerator Blink(int times){
